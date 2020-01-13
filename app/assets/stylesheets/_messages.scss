@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+$WhiteColor: #ffffff;
+$SkyColor: #38aef0;
+@mixin side_by_side($type){
+  display: flex;
+  justify-content: $type;
+}
+
+wrapper {
+  height: 100vh;
+  display: flex;
+}
+
+.chat-side {
+  width: 300px;
+}
+
+.side-header {
+  height: 100px;
+  background-color: #253141;
+  display: flex;
+  align-items: center;
+  &__box {
+    height: 20px;
+    width: 260px;
+    margin: 0 20px;
+    @include side_by_side(space-between);
+    &__user-name {
+      color: $WhiteColor;
+      font-weight: bold;
+    } 
+    &__menu {
+      width: 60px;
+      @include side_by_side(flex-end);
+      list-style: none;
+      li {
+        margin-left: 5px;
+        a {
+          color: $WhiteColor;
+        }
+      }
+    }
+  }
+}
+
+.groups {
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+  padding: 20px;
+}
+
+.group {
+  height: 91px;
+  width: 300px;;
+  &__group-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: $WhiteColor;
+    width: 260px;
+  }
+  &__first-message {
+    font-size: 11px;
+    font-weight: bold;
+    color: $WhiteColor;
+    width: 260px;
+    margin-top: 5px;
+  }
+}
+
+.chat-main {
+  width: calc(100vw - 300px);
+  background-color: $WhiteColor;
+}
+
+.main-header {
+  height: 100px;
+  background-color: $WhiteColor;
+  @include side_by_side(space-between);
+  padding: 0 40px;
+  align-items: center;
+  &__left-box {
+    margin-top: 35px;
+    &__current-group {
+      color: #333333;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    &__member-list {
+      color: #999999;
+      font-size: 12px;
+      display: flex;
+      list-style: none;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  &__edit-btn {
+    color: $SkyColor;
+    font-size: 16px;
+    border: 1px solid $SkyColor;
+    padding: 12px 20px;
+    box-sizing:border-box;
+  }
+}
+
+.messages {
+  height: calc(100vh - 190px);
+  background-color: #fafafa;
+  padding: 35px 0 0 40px;
+}
+
+.message {
+  &__upper-info {
+    display: flex;
+    &__name {
+      color: #333333;
+      font-size: 16px;
+    }
+    &__date {
+      color: #999999;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  }
+  &__lwr-text {
+    color: 434A54;
+    font-size: 14px;
+    margin-top: 12px;
+    padding-bottom: 46px;
+  }
+}
+
+.form {
+  height: 90px;
+  background-color: #d2d2d2;
+  padding: 20px 40px;
+}
+
+form {
+  display: flex;
+  .input-box {
+    width: 100%;
+    display: flex;
+    position: relative;
+    &__text {
+      height: 50px;
+      width: 100%;
+      color: #434a54;
+      border-style: none;
+      padding: 0 40px 0 10px;
+    }
+    &__image {
+      cursor: pointer;
+      font-size: 1.3rem;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      &__file {
+        display: none;
+      }
+    } 
+  }
+}
+
+.submit-btn {
+  width: 100px;
+  height: 50px;
+  padding: 0 30px;
+  margin-left: 15px;
+  background-color: $SkyColor;
+  color: white;
+  cursor: pointer;
+}
