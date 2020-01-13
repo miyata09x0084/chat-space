@@ -95,15 +95,15 @@ wrapper {
       list-style: none;
     }
   }
-  &__edit-btn {
+  a {
     text-decoration: none;
-    &__font {
+  }
+  &__edit-btn {
     color: $SkyColor;
     font-size: 16px;
     border: 1px solid $SkyColor;
     padding: 12px 20px;
     box-sizing:border-box;
-    }
   }
 }
 
