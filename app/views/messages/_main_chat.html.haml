@@ -1,6 +1,6 @@
-%div.chat-main
-  %div.main-header
-    %div.main-header__left-box
+.chat-main
+  .main-header
+    .main-header__left-box
       %h2.main-header__left-box__current-group
         test
       %ul.main-header__left-box__member-list
@@ -9,26 +9,26 @@
         %li.main-header__left-box__member-list__member
           mike      
     = link_to "#" do
-      %div.main-header__edit-btn
+      .main-header__edit-btn
         Edit
-  %div.messages
-    %div.message
-      %div.message__upper-info
+  .messages
+    .message
+      .message__upper-info
         %p.message__upper-info__name
           Ryo
         %p.message__upper-info__date
           2020/01/11(Sat)
       %p.message__lwr-text
         投稿内容が入ります
-    %div.message
-      %div.message__upper-info
+    .message
+      .message__upper-info
         %p.message__upper-info__name
           Mike
         %p.message__upper-info__date
           2020/01/12(Sun)
       %p.message__lwr-text
         投稿内容が入ります
-  %div.form
+  .form
     %form.new-message 
       .input-box
         %input{type: "text", class: "input-box__text", placeholder: "type a message"}
