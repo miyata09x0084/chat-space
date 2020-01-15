@@ -127,11 +127,13 @@ wrapper {
     }
   }
   &__lwr-text {
-    color: 434A54;
-    font-size: 14px;
-    margin-top: 12px;
-    padding-bottom: 46px;
-  }
+    &__content {
+      color: 434A54;
+      font-size: 14px;
+      margin-top: 12px;
+      padding-bottom: 46px;
+    }
+  }  
 }
 
 .form {
