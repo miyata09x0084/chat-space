@@ -67,3 +67,5 @@ gem 'factory_bot_rails'
 gem 'faker'
 
 gem 'capybara'
+
+gem 'unicorn', '5.4.1'
