@@ -68,4 +68,6 @@ gem 'faker'
 
 gem 'capybara'
 
-gem 'unicorn', '5.4.1'
+group :production do
+  gem 'unicorn', '5.4.1'
+end
