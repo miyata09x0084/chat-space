@@ -18,6 +18,7 @@
                     <img src="${message.image}" class="message__lwr-text__image">
                   </div>
                 </div>`
+                return html;
     } else {
     var html =  `<div class="message" data-message-id="${message.id}">
                   <div class="message__upper-info">
@@ -34,9 +35,9 @@
                     </p>
                   </div>
                 </div>`
-    };
-                  return html;
-   };
+                return html;
+            };
+   }
 
   $('#new_message').on('submit', function(e){
     e.preventDefault()
