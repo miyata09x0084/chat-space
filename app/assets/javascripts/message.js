@@ -77,7 +77,6 @@
     })
     .done(function(messages) {
       if (messages.length !== 0) {
-        
         //追加するHTMLの入れ物を作る
         var insertHTML = '';
         //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
@@ -88,7 +87,7 @@
         $('.messages').append(insertHTML);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
         $('form')[0].reset();
-        $('.submit-btn').removeAttr("disabled");
+        $('.submit-btn').prop("disabled" , false);
       }
     })
     .fail(function() {
