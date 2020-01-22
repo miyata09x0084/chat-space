@@ -55,8 +55,8 @@
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-      $('form')[0].reset();
-      $(".submit-btn").removeAttr("disabled");
+      $('#new_message')[0].reset();
+      $('.submit-btn').prop("disabled" , false);
     })
     .fail(function(){
       alert('メッセージ送信に失敗しました');
@@ -86,7 +86,7 @@
         //メッセージが入ったHTMLに、入れ物ごと追加
         $('.messages').append(insertHTML);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-        $('form')[0].reset();
+        $('#new_message')[0].reset();
         $('.submit-btn').prop("disabled" , false);
       }
     })
