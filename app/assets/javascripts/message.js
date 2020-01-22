@@ -2,38 +2,38 @@
   
   function buildHTML(message){
     if (message.image) {
-      var html =  `<div class="message" data-message-id=` + message.id + `>` +
-                  `<div class="message__upper-info">` +
-                    `<p class="message__uper-info__name">` +
-                      message.user_name +
-                    `</p>` +
-                    `<p class="message__upper-info__date">` +
-                      message.created_at +
-                    `</p>` +
-                  `</div>` +
-                  `<div class="message__lwr-text">` +
-                    `<p class="message__lwr-text__content">` +
-                      message.content +
-                    `</p>` +
-                    `<img src="` + message.image + `" class="message__lwr-text__image" >` +
-                  `</div>` +
-                `</div>`
+    var html =  `<div class="message" data-message-id="${message.id}">
+                  <div class="message__upper-info">
+                    <p class="message__uper-info__name">
+                      ${message.user_name}
+                    </p> 
+                    <p class="message__upper-info__date">
+                      ${message.created_at}
+                    </p>
+                  </div>
+                  <div class="message__lwr-text">
+                    <p class="message__lwr-text__content">
+                      ${message.content}
+                    </p>
+                    <img src="${message.image}" class="message__lwr-text__image">
+                  </div>
+                </div>`
     } else {
-      var html =  `<div class="message" data-message-id=` + message.id + `>` +
-                  `<div class="message__upper-info">` +
-                    `<p class="message__uper-info__name">` +
-                      message.user_name +
-                    `</p>` +
-                    `<p class="message__upper-info__date">` +
-                      message.created_at +
-                    `</p>` +
-                  `</div>` +
-                  `<div class="message__lwr-text">` +
-                    `<p class="message__lwr-text__content">` +
-                      message.content +
-                    `</p>` +
-                  `</div>` +
-                `</div>`
+    var html =  `<div class="message" data-message-id="${message.id}">
+                  <div class="message__upper-info">
+                    <p class="message__uper-info__name">
+                      ${message.user_name}
+                    </p> 
+                    <p class="message__upper-info__date">
+                      ${message.created_at}
+                    </p>
+                  </div>
+                  <div class="message__lwr-text">
+                    <p class="message__lwr-text__content">
+                      ${message.content}
+                    </p>
+                  </div>
+                </div>`
     };
                   return html;
    };
