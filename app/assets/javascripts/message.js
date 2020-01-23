@@ -76,6 +76,7 @@
       data: {id: last_message_id}
     })
     .done(function(messages) {
+      console.log(messages.length);
       if (messages.length !== 0) {
         //追加するHTMLの入れ物を作る
         var insertHTML = '';
@@ -96,7 +97,7 @@
   };
 
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-    setInterval(reloadMessages, 7000);
+    setInterval(reloadMessages, 20000);
   }
 
 })
